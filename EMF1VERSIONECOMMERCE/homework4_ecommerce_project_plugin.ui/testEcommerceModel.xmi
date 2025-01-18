@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ER:DataBase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ER="https://homework4_ecommerce_project/ER" name="E-commerce">
+  <entities name="Order">
+    <attributes name="orderDate"/>
+  </entities>
+  <entities name="Product">
+    <attributes name="productName"/>
+  </entities>
+  <entities name="OrderItem">
+    <attributes name="orderItemAmount"/>
+  </entities>
+  <entities name="Review">
+    <attributes name="ratingReview"/>
+  </entities>
+  <entities name="Shipping">
+    <attributes name="shippingMethod"/>
+  </entities>
+  <entities name="Payment"/>
+  <entities name="Cart">
+    <attributes name="amountPayment"/>
+  </entities>
+  <entities name="Category">
+    <attributes name="categoryName"/>
+  </entities>
+  <entities name="Customar">
+    <attributes name="customarAddress"/>
+  </entities>
+</ER:DataBase>

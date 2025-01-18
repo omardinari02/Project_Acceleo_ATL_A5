@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ER:DataBase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ER="https://homework4_ecommerce_project/ER"
+    name="Ecommerce">
+  <entities name="Order" incomingRelation="#//@entities.1/@relations.0">
+    <attributes name="orderID" esPK="true"/>
+    <attributes name="date"/>
+    <attributes name="status"/>
+    <attributes name="totalAmount"/>
+    <relations name="orderItem" entity="#//@entities.2"/>
+    <relations name="payment" entity="#//@entities.5"/>
+    <relations name="shipping" entity="#//@entities.3"/>
+    <relations name="review" entity="#//@entities.4"/>
+  </entities>
+  <entities name="Customar">
+    <attributes name="customarID"/>
+    <attributes name="name"/>
+    <attributes name="email"/>
+    <attributes name="address"/>
+    <relations name="order" entity="#//@entities.0"/>
+  </entities>
+  <entities name="OrderItem" incomingRelation="#//@entities.0/@relations.0">
+    <attributes name="quantity"/>
+    <attributes name="price"/>
+    <relations name="product"/>
+  </entities>
+  <entities name="Shipping" incomingRelation="#//@entities.0/@relations.2">
+    <attributes name="shippingMethod"/>
+    <attributes name="trackingNumber"/>
+    <attributes name="shippingDate"/>
+  </entities>
+  <entities name="Review" incomingRelation="#//@entities.0/@relations.3">
+    <attributes name="reviewID"/>
+    <attributes name="rating"/>
+    <attributes name="comment"/>
+  </entities>
+  <entities name="Payment" incomingRelation="#//@entities.0/@relations.1">
+    <attributes name="paymentID"/>
+    <attributes name="amount"/>
+    <attributes name="method"/>
+    <attributes name="status"/>
+  </entities>
+  <entities name="Product" incomingRelation="#//@entities.8/@relations.0">
+    <attributes name="productID"/>
+    <attributes name="name"/>
+    <attributes name="price"/>
+    <attributes name="description"/>
+    <attributes name="stockQuantity"/>
+    <relations name="category" entity="#//@entities.7"/>
+  </entities>
+  <entities name="Category" incomingRelation="#//@entities.6/@relations.0">
+    <attributes name="categoryID"/>
+    <attributes name="name"/>
+    <attributes name="parentCategory"/>
+  </entities>
+  <entities name="Cart">
+    <relations name="product" entity="#//@entities.6"/>
+  </entities>
+</ER:DataBase>

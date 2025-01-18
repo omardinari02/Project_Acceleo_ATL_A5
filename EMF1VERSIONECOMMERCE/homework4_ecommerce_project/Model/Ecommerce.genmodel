@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/homework4_ecommerce_project/src" modelPluginID="homework4_ecommerce_project"
+    modelName="Ecommerce" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Ecommerce_homework_4.ecore</foreignModel>
+  <genPackages prefix="EntityRelationships" basePackage="homework4_ecommerce_project"
+      disposableProviderFactory="true" ecorePackage="Ecommerce_homework_4.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ecommerce_homework_4.ecore#//Cardinality">
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//Cardinality/ONE2ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//Cardinality/ONE2MANY"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//Cardinality/MANY2MANY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ecommerce_homework_4.ecore#//PrimitiveTypes">
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//PrimitiveTypes/String"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//PrimitiveTypes/Int"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//PrimitiveTypes/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce_homework_4.ecore#//PrimitiveTypes/Date"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="Ecommerce_homework_4.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce_homework_4.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce_homework_4.ecore#//DataBase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce_homework_4.ecore#//DataBase/entities"/>
+      <genOperations ecoreOperation="Ecommerce_homework_4.ecore#//DataBase/NmEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce_homework_4.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce_homework_4.ecore#//Entity/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce_homework_4.ecore#//Entity/relations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce_homework_4.ecore#//Entity/incomingRelation"/>
+      <genOperations ecoreOperation="Ecommerce_homework_4.ecore#//Entity/NmAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce_homework_4.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce_homework_4.ecore#//Attribute/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce_homework_4.ecore#//Relation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce_homework_4.ecore#//Relation/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce_homework_4.ecore#//Relation/cardinality"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

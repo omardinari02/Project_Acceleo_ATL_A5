@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_E82uEL77Ee-g18TK_2yc9A" version="15.4.1.202403191723">
+  <semanticResources>Model/Ecommerce_homework_4.ecore</semanticResources>
+  <semanticResources>Model/Ecommerce.genmodel</semanticResources>
+  <semanticResources>Model/DataBase1.xmi</semanticResources>
+</viewpoint:DAnalysis>

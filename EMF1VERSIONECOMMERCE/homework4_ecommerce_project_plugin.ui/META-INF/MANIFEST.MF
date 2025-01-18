@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ui
+Bundle-SymbolicName: homework4_ecommerce_project_plugin.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ homework4_ecommerce_project;bundle-version="1.0.0"
+Automatic-Module-Name: homework4.ecommerce.project.plugin.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Import-Package: org.eclipse.emf.ecore.xmi.impl;version="[2.38.0,3.0.0)"

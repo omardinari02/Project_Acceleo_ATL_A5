@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Ecommerce -->
+      <package
+            uri="https://homework4_ecommerce_project/ER"
+            class="homework4_ecommerce_project.EntityRelationships.EntityRelationshipsPackage"
+            genModel="Model/Ecommerce.genmodel"/>
+   </extension>
+
+</plugin>
