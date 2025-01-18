@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Classifier xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Class" name="Ecommerce">
+  <ent name="Order">
+    <attr name="orderID"/>
+    <attr name="date"/>
+    <attr name="status"/>
+    <attr name="totalAmount"/>
+    <rel name="orderItem"/>
+    <rel name="payment"/>
+    <rel name="shipping"/>
+    <rel name="review"/>
+  </ent>
+  <ent name="Customar">
+    <attr name="customarID"/>
+    <attr name="name"/>
+    <attr name="email"/>
+    <attr name="address"/>
+    <rel name="order"/>
+  </ent>
+  <ent name="OrderItem">
+    <attr name="quantity"/>
+    <attr name="price"/>
+    <rel name="product"/>
+  </ent>
+  <ent name="Shipping">
+    <attr name="shippingMethod"/>
+    <attr name="trackingMethod"/>
+    <attr name="shippingDate"/>
+  </ent>
+  <ent name="Review">
+    <attr name="reviewID"/>
+    <attr name="rating"/>
+    <attr name="comment"/>
+  </ent>
+  <ent name="Payment">
+    <attr name="paymentID"/>
+    <attr name="amount"/>
+    <attr name="method"/>
+    <attr name="status"/>
+  </ent>
+  <ent name="Product">
+    <attr name="productID"/>
+    <attr name="name"/>
+    <attr name="price"/>
+    <attr name="description"/>
+    <attr name="stockQuantity"/>
+    <rel name="category"/>
+  </ent>
+  <ent name="Category">
+    <attr name="categoryID"/>
+    <attr name="name"/>
+    <attr name="parentCategory"/>
+  </ent>
+  <ent name="Cart">
+    <rel name="product"/>
+  </ent>
+</Classifier>

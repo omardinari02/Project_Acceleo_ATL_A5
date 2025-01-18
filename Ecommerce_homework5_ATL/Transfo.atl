@@ -1,0 +1,37 @@
+-- @path Class=/EMF1VERSIONECOMMERCE/homework4_ecommerce_project/Model/Ecommerce_homework_5.ecore
+-- @path ER=/EMF1VERSIONECOMMERCE/homework4_ecommerce_project/Model/Ecommerce_homework_4.ecore
+
+module Transfo;
+create OUT : Class from IN : ER;
+
+rule DataBase2Classifier{
+	   from o : ER!DataBase
+       to i : Class!Classifier (
+       	   name <- o.name,
+		   ent <- o.entities
+		
+       	)
+	}
+
+rule Entity2Class{
+	   from o : ER!Entity
+       to i : Class!Class (
+       	   name <- o.name,
+		   attr <- o.attributes,
+		   rel <- o.relations
+       	)
+	}
+
+rule Attribute2Attribute{
+	   from o : ER!Attribute
+       to i : Class!Attribute (
+       	   name <- o.name
+       	)
+	}
+
+rule Relation2Relation{
+	   from o : ER!Relation
+       to i : Class!Relation (
+       	   name <- o.name
+       	)
+	}
