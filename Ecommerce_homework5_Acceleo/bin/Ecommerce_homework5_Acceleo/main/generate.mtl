@@ -1,0 +1,24 @@
+[comment encoding = UTF-8 /]
+[module generate('https://homework4_ecommerce_project/ER')]
+[import Ecommerce_homework5_Acceleo::main::entities/]
+
+[template public generateElement(aDataBase : DataBase)]
+[comment @main/]
+[file (aDataBase.name, false, 'UTF-8')]
+============================================================
+                      DATABASE REPORT
+============================================================
+
+Database Name: [aDataBase.name/]
+------------------------------------------------------------
+
+Entities Overview:
+[for (entity : Entity | aDataBase.entities)]
+   [entity.generateEntity()/]
+[/for]
+
+============================================================
+                     END OF REPORT
+============================================================
+[/file]
+[/template]

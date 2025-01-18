@@ -1,0 +1,31 @@
+[comment encoding = UTF-8 /]
+[module entities('https://homework4_ecommerce_project/ER')]
+
+
+[template public generateEntity(anEntity : Entity)]
+[comment @main/]
+------------------------------------------------------------
+Entity: [anEntity.name/]
+------------------------------------------------------------
+Attributes:
+
+[if (anEntity.attributes->isEmpty())]
+  (No attributes defined for this entity.)
+[else]
+  [for (attr : Attribute | anEntity.attributes)]
+    - [attr.name/]: [attr.Type/]
+  [/for]
+[/if]
+
+Outgoing Relations:
+
+[if (anEntity.relations->isEmpty())]
+  (No outgoing relations.)
+[else]
+  [for (rel : Relation | anEntity.relations)]
+    - To Entity: [rel.entity.name/]
+      ***Cardinality: [rel.cardinality/]***
+  [/for]
+[/if]
+
+[/template]

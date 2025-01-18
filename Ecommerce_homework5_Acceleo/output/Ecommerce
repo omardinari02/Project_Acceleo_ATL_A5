@@ -1,0 +1,151 @@
+============================================================
+                      DATABASE REPORT
+============================================================
+
+Database Name: Ecommerce
+------------------------------------------------------------
+
+Entities Overview:
+   ------------------------------------------------------------
+   Entity: Order
+   ------------------------------------------------------------
+   Attributes:
+   
+       - orderID: Int
+       - date: Date
+       - status: String
+       - totalAmount: Float
+   
+   Outgoing Relations:
+   
+       - To Entity: OrderItem
+         ***Cardinality: ONE2ONE***
+       - To Entity: Payment
+         ***Cardinality: ONE2ONE***
+       - To Entity: Shipping
+         ***Cardinality: ONE2ONE***
+       - To Entity: Review
+         ***Cardinality: ONE2ONE***
+   
+   
+   ------------------------------------------------------------
+   Entity: Customar
+   ------------------------------------------------------------
+   Attributes:
+   
+       - customarID: Int
+       - name: String
+       - email: String
+       - address: String
+   
+   Outgoing Relations:
+   
+       - To Entity: Order
+         ***Cardinality: ONE2ONE***
+   
+   
+   ------------------------------------------------------------
+   Entity: OrderItem
+   ------------------------------------------------------------
+   Attributes:
+   
+       - quantity: Int
+       - price: Float
+   
+   Outgoing Relations:
+   
+       - To Entity: Product
+         ***Cardinality: ONE2MANY***
+   
+   
+   ------------------------------------------------------------
+   Entity: Shipping
+   ------------------------------------------------------------
+   Attributes:
+   
+       - shippingMethod: String
+       - trackingMethod: String
+       - shippingDate: Date
+   
+   Outgoing Relations:
+   
+     (No outgoing relations.)
+   
+   
+   ------------------------------------------------------------
+   Entity: Review
+   ------------------------------------------------------------
+   Attributes:
+   
+       - reviewID: Int
+       - rating: Float
+       - comment: String
+   
+   Outgoing Relations:
+   
+     (No outgoing relations.)
+   
+   
+   ------------------------------------------------------------
+   Entity: Payment
+   ------------------------------------------------------------
+   Attributes:
+   
+       - paymentID: Int
+       - amount: Float
+       - method: String
+       - status: String
+   
+   Outgoing Relations:
+   
+     (No outgoing relations.)
+   
+   
+   ------------------------------------------------------------
+   Entity: Product
+   ------------------------------------------------------------
+   Attributes:
+   
+       - productID: Int
+       - name: String
+       - price: Float
+       - description: String
+       - stockQuantity: Int
+   
+   Outgoing Relations:
+   
+       - To Entity: Category
+         ***Cardinality: MANY2MANY***
+   
+   
+   ------------------------------------------------------------
+   Entity: Category
+   ------------------------------------------------------------
+   Attributes:
+   
+       - categoryID: Int
+       - name: String
+       - parentCategory: String
+   
+   Outgoing Relations:
+   
+     (No outgoing relations.)
+   
+   
+   ------------------------------------------------------------
+   Entity: Cart
+   ------------------------------------------------------------
+   Attributes:
+   
+     (No attributes defined for this entity.)
+   
+   Outgoing Relations:
+   
+       - To Entity: Product
+         ***Cardinality: ONE2MANY***
+   
+   
+
+============================================================
+                     END OF REPORT
+============================================================
